@@ -8,7 +8,7 @@ Apenas um guia prático para começar com git. Sem complicação ;)
 git clone https://github.com/emalherbi/git-descomplicado.git
 ```
 
-2) Crie uma nova branch chamada de "primeira-branch", geralmente cria-se um issues referente a essa branch criada. Esse issues detalha o que está sendo corrigido no projeto:
+2) Crie uma nova branch chamada de "primeira-branch", geralmente cria-se um issues referente a essa branch. Esse issues detalha o que está sendo corrigido no projeto:
 
 ```
 git checkout -b primeira-branch
@@ -40,10 +40,10 @@ git push --set-upstream origin primeira-branch
 git checkout master
 ```
 
-7) Faça um merge da sua branch para a master:
+7) Faça um merge da suas branchs para a master:
 
 ```
-git merge primeira-branch
+git merge primeira-branch segunda-branch terceira-branch
 ```
 
 8) Envie suas alterações para a master do git:
@@ -52,21 +52,27 @@ git merge primeira-branch
 git push
 ```
 
-9) Crie uma tag do seu projeto. Essa tag é uma versão do projeto com todos seus commits.
+9) Remova a branch do seu local de trabalho e do git:
+
+```
+git branch -d primeira-branch
+git push origin :primeira-branch
+```
+
+10) Crie uma release do seu projeto. Essa release é uma versão do projeto com todas suas branchs enviadas para a master.
 
 ```
 git tag -a v1.0.0 -m "minha versao v1.0.0"
 ```
 
-10) Envie sua tag para o git:
+11) Envie sua tag para o git:
 
 ```
 git push origin v1.0.0
 ```
 
-11) Remova a branch do seu local de trabalho e do git:
+12) Remove a tag do seu local de trabalho:
 
 ```
-git branch -d primeira-branch
-git push origin :primeira-branch
+git tag -d v1.0.0
 ```
