@@ -23,3 +23,7 @@ git add *
 5) Para realmente confirmar estas mudanças (isto é, fazer um commit), use:
 
 git commit -m "comentários das alterações"
+
+6) Envie suas alterações para o git:
+
+git push --set-upstream origin primeira-branch
