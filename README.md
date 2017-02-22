@@ -46,8 +46,27 @@ git checkout master
 git merge primeira-branch
 ```
 
-8) Crie uma tag do seu projeto. Essa tag é uma versão do projeto com todos seus commits.
+8) Envie suas alterações para a master do git:
 
 ```
-git tag -a v1.0.0 -m "minha versao 1.0.0"
+git push
+```
+
+9) Crie uma tag do seu projeto. Essa tag é uma versão do projeto com todos seus commits.
+
+```
+git tag -a v1.0.0 -m "minha versao v1.0.0"
+```
+
+10) Envie sua tag para o git:
+
+```
+git push origin v1.0.0
+```
+
+11) Remova a branch do seu local de trabalho e do git:
+
+```
+git branch -d primeira-branch
+git push origin :primeira-branch
 ```
